@@ -1,0 +1,119 @@
+:root {
+  --bg-light: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  --bg-dark: #1c1c1c;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.weather-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #0072ff;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #dff0ff;
+}
+
+.weather-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  color: inherit;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  background: #ffffff;
+  color: #0072ff;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.toggle-theme {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
